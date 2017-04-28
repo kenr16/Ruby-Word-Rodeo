@@ -40,5 +40,20 @@ describe("the dictionary path", {:type => :feature}) do
     Word.clear_words
   end
 
+  it("Alphabetizes several words on the main page.") do
+    visit("/")
+    fill_in("word_input", :with => "Bee")
+    click_button("Add Word")
+    fill_in("word_input", :with => "Camel")
+    click_button("Add Word")
+    fill_in("word_input", :with => "Zebra")
+    click_button("Add Word")
+    fill_in("word_input", :with => "Ant")
+    click_button("Add Word")
+    click_link("Alphabetize")
+    expect(page).to have_content("Ant Bee Camel Zebra")
+    Word.clear_words
+  end
+
 
 end

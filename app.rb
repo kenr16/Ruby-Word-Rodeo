@@ -48,3 +48,9 @@ get("/delete/:id") do
   Word.delete(params.fetch('id'))
   erb(:index)
 end
+
+get("/alphabetize") do
+  @floating_text = "Words Alphabetized!"
+  Word.sort()
+  erb(:index)
+end

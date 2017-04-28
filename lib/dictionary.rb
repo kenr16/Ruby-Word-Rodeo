@@ -53,6 +53,10 @@ class Word
     @@words.delete(self.find(id))
   end
 
+  def self.sort()
+  @@words.sort! { |a,b| a.string.downcase <=> b.string.downcase }
+  end
+
 end
 
 class Definition
