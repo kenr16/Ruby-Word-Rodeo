@@ -54,3 +54,11 @@ get("/alphabetize") do
   Word.sort()
   erb(:index)
 end
+
+get("/random") do
+  id = Word.random
+  @word = Word.find(Word.all.shuffle[0].id)
+  display = @word.string
+  @floating_text = "#{display}"
+  erb(:word)
+end

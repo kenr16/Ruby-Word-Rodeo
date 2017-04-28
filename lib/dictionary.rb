@@ -57,6 +57,10 @@ class Word
   @@words.sort! { |a,b| a.string.downcase <=> b.string.downcase }
   end
 
+  def self.random
+    @@words.shuffle[0].id
+  end
+
 end
 
 class Definition

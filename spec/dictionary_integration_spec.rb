@@ -50,7 +50,7 @@ describe("the dictionary path", {:type => :feature}) do
     click_button("Add Word")
     fill_in("word_input", :with => "Ant")
     click_button("Add Word")
-    click_link("Alphabetize")
+    click_link("Alphabetize Lasso")
     expect(page).to have_content("Ant Bee Camel Zebra")
     Word.clear_words
   end
