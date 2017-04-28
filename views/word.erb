@@ -9,7 +9,7 @@
   <% end %>
 </ul>
 
-<form action="/add-definition/<%="#{@word.id}"%>">
+<form action="/add-definition/<%="#{@word.id}"%>" method="post">
   <div class="form-group">
     <label for="definition_input">Brand this word with a definition:</label>
     <input name="definition_input" id="definition_input" class="form-control" type="text">
@@ -19,5 +19,5 @@
 
 <br>
 
-<a href="/delete/<%="#{@word.id}"%>" class="btn btn-danger">Delete</a>
+<a href="/delete/<%="#{@word.id}"%>" class="btn btn-danger">Delete Word</a>
 <a href="/" class="btn btn-info">Back</a>

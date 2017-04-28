@@ -10,7 +10,7 @@ get('/') do
   erb(:index)
 end
 
-get('/add-word') do
+post('/add-word') do
   word_input = params.fetch('word_input')
   Word.new(word_input)
   @floating_text = "You've corralled a NEW WORD ranch hand: #{word_input}"
@@ -24,7 +24,7 @@ get("/edit/:id") do
   erb(:word)
 end
 
-get("/add-definition/:id") do
+post("/add-definition/:id") do
   definition_input = params.fetch('definition_input')
   new_definition = Definition.new(definition_input)
   @word = Word.find(params.fetch('id'))

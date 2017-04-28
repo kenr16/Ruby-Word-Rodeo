@@ -29,15 +29,16 @@ describe("the dictionary path", {:type => :feature}) do
     Word.clear_words
   end
 
-  # it("Deletes a word from the database.") do
-  #   visit("/")
-  #   fill_in("word_input", :with => "Rabbit")
-  #   click_button("Add Word")
-  #   expect(page).to have_content("Rabbit")
-  #   click_link("Delete")
-  #   expect(page).to have_content("Word Deleted!")
-  #   Contact.empty_collection
-  # end
+  it("Deletes a word from the database.") do
+    visit("/")
+    fill_in("word_input", :with => "Rabbit")
+    click_button("Add Word")
+    expect(page).to have_content("Rabbit")
+    click_link("Rabbit")
+    click_link("Delete Word")
+    expect(page).to have_content("Word Deleted!")
+    Word.clear_words
+  end
 
 
 end
