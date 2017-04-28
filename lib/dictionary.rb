@@ -28,6 +28,11 @@ class Word
     @definitions.push(definition) unless definition.string.empty?
   end
 
+  def self.find(input)
+    @@words.detect {|word| word.id == input}
+
+  end
+
 end
 
 class Definition

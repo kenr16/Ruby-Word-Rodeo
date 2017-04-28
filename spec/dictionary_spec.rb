@@ -40,7 +40,13 @@ describe 'Word' do
     end
   end
 
-
+  describe("#find") do
+    it "Finds and returns a word given the word's ID" do
+      test_word = Word.new("Hello")
+      id = test_word.id
+      expect(Word.find(id)).to eq(test_word)
+    end
+  end
 
 end
 

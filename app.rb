@@ -15,3 +15,8 @@ get('/add-word') do
   @floating_text = "You've corralled a NEW WORD ranch hand: #{word_input}"
   erb(:index)
 end
+
+get("/edit/:id") do
+  @word = Word.find(params.fetch('id'))
+  erb(:word)
+end
