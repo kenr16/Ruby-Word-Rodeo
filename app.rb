@@ -32,3 +32,8 @@ get("/add-definition/:id") do
   @floating_text = "#{display}"
   erb(:word)
 end
+
+get("/delete/:id") do
+  Word.delete(params.fetch('id'))
+  erb(:index)
+end
