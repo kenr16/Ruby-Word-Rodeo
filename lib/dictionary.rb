@@ -49,6 +49,10 @@ class Word
     @@words.detect {|word| word.id == input}
   end
 
+  def self.find_word(input)
+    @@words.detect {|word| word.string.downcase == input.downcase}
+  end
+
   def self.delete(id)
     @@words.delete(self.find(id))
   end

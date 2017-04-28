@@ -62,3 +62,18 @@ get("/random") do
   @floating_text = "#{display}"
   erb(:word)
 end
+
+get("/search") do
+  word_to_find = params.fetch('search_input')
+  @word = Word.find_word(word_to_find)
+  if @word != nil
+    display = @word.string
+    @floating_text = "#{display}"
+    erb(:word)
+  else
+    @floating_text = "Word Not Found!"
+    erb(:index)
+  end
+
+
+end
