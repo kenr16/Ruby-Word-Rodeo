@@ -6,6 +6,7 @@ require 'pry'
 also_reload('lib/**/*.rb')
 
 get('/') do
+  @floating_text = "Welcome to the word rodeo, rounds up words and define them to win points!"
   erb(:index)
 end
 
@@ -34,6 +35,7 @@ get("/add-definition/:id") do
 end
 
 get("/delete/:id") do
+  @floating_text = "Word Deleted!"
   Word.delete(params.fetch('id'))
   erb(:index)
 end

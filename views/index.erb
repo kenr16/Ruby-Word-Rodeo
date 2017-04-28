@@ -3,12 +3,16 @@
 <% unless Word.all.empty? %>
 <h3> Your Words So Far: </h3>
 <% end %>
-
+<br>
 <ul>
   <% Word.all.each do |word| %>
     <%= "<li><a href='/edit/#{word.id}'>#{word.string}</a></li>" %>
   <% end %>
 </ul>
+<br>
+<h3> Points you have earned: <%= Word.all.length %></h3>
+<br>
+
 
 <form action="/add-word">
   <div class="form-group">
