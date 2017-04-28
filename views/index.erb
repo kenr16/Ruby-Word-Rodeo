@@ -1,0 +1,18 @@
+<h2><%= @floating_text %></h2>
+
+<% unless Word.all.empty? %>
+<h3> Your Words So Far: </h3>
+<% end %>
+
+<ul>
+  <% Word.all.each do |word| %>
+    <%= "<li>#{word.string}</li>" %>
+  <% end %>
+</ul>
+
+<form action="/add-word">
+  <div class="form-group">
+    <label for="word_input">Round Up a New Word!</label>
+    <input name="word_input" id="word_input" class="form-control" type="text">
+  </div>
+</form>
