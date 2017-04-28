@@ -1,23 +1,35 @@
-<h2><%= @floating_text %></h2>
+<div class="pagecontainer">
+  <h2><%= @floating_text %></h2>
 
-<% unless Word.all.empty? %>
-<h3> Your Words So Far: </h3>
-<% end %>
-<br>
-<ul>
-  <% Word.all.each do |word| %>
-    <%= "<li><a href='/edit/#{word.id}'>#{word.string}</a></li>" %>
+  <% unless Word.all.empty? %>
+  <h3> Your Words So Far: </h3>
   <% end %>
-</ul>
-<br>
-<h3> Points you have earned: <%= Word.all.length %></h3>
-<br>
-
-
-<form action="/add-word" method="post">
-  <div class="form-group">
-    <label for="word_input">Round Up a New Word!</label>
-    <input name="word_input" id="word_input" class="form-control" type="text">
+  <br>
+  <div class="row">
+    <div class="col-sm-2">
+      <img src="img/lasso.png" alt="" />
+    </div>
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
+      <ul>
+        <% Word.all.each do |word| %>
+          <%= "<li><a href='/edit/#{word.id}'>#{word.string}</a></li>" %>
+        <% end %>
+      </ul>
+    </div>
   </div>
-  <button class="btn btn-primary">Add Word</button>
-</form>
+  <br>
+  <h3> Points you have earned: <%= Word.all.length %></h3>
+  <br>
+
+
+  <form action="/add-word" method="post">
+    <div class="form-group">
+      <label for="word_input">Round Up a New Word!</label>
+      <input name="word_input" id="word_input" class="form-control" type="text">
+    </div>
+    <button class="btn btn-primary">Add Word</button>
+  </form>`
+
+</div>

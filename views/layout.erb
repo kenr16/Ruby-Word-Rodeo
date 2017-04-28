@@ -6,13 +6,28 @@
     <link  rel='stylesheet' href="/css/styles.css" >
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
-      <h1 id="header">Word Rodeo Homepage</h1>
-      <hr>
-        <%= yield %>
-    </div>
+    <div class="content">
+      <div class="topbar row">
+        <div class="col-sm-2">
+          <img src="img/hat.png" alt="" />
+        </div>
+        <div class="col-sm-7">
+          <h1 id="header">Word Rodeo Homepage</h1>
+        </div>
+        <div class="col-sm-2">
+          <img class="head" src="img/head.png" alt="" />
+        </div>
+      </div>
+      <div class="spacer">
 
+      </div>
+      <div class="container">
+        <hr>
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

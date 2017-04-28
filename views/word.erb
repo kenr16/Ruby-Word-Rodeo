@@ -17,7 +17,28 @@
   <button class="btn btn-primary">Add Definition!</button>
 </form>
 
+<hr>
+
+<form action="/add-link/<%="#{@word.id}"%>" method="post">
+  <div class="form-group">
+    <label for="link_input">Lasso an image of this word with an image link!</label>
+    <input name="link_input" id="link_input" class="form-control" type="text">
+  </div>
+  <button class="btn btn-primary">Add Image!</button>
+</form>
+
 <br>
 
 <a href="/delete/<%="#{@word.id}"%>" class="btn btn-danger">Delete Word</a>
 <a href="/" class="btn btn-info">Back</a>
+
+<hr>
+
+<ul>
+  <% @word.links.each do |link| %>
+    <%= "<li><img src='#{link}'/></li><br><hr><br>" %>
+  <% end %>
+</ul>
+
+<style>img {width: 500px;
+max-height: 700px;}</style>

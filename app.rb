@@ -6,7 +6,7 @@ require 'pry'
 also_reload('lib/**/*.rb')
 
 get('/') do
-  @floating_text = "Welcome to the word rodeo, rounds up words and define them to win points!"
+  @floating_text = "Welcome to the word rodeo, round up some words and define them to win points!"
   erb(:index)
 end
 
@@ -29,6 +29,15 @@ post("/add-definition/:id") do
   new_definition = Definition.new(definition_input)
   @word = Word.find(params.fetch('id'))
   @word.add_definition(new_definition)
+  display = @word.string
+  @floating_text = "#{display}"
+  erb(:word)
+end
+
+post("/add-link/:id") do
+  link_input = params.fetch('link_input')
+  @word = Word.find(params.fetch('id'))
+  @word.add_link(link_input)
   display = @word.string
   @floating_text = "#{display}"
   erb(:word)

@@ -1,0 +1,61 @@
+.content {
+  background: url('../img/background.jpg') center no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  height: 1500px;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+li {
+  font-size: 30px;
+}
+
+.container {
+  height: 100%;
+}
+
+.spacer {
+  width: 100%;
+  height: 150px;
+}
+
+.pagecontainer {
+  opacity: .8;
+  background-color: #ffe680;
+  padding: 20px;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 30px;
+}
+
+.topbar {
+  width: 100%;
+  height: 150px;
+  display:block;
+  border:3px solid black;
+  border-color: #000000;
+  border-width: 0px 0px 10px 0px;
+  background-color: #ffd480;
+  position: absolute;
+  margin-bottom: 100px;
+  text-align: center;
+  padding: 30px;
+  z-index: 1;
+}
+
+#header {
+  font-size: 100px;
+  color: #cc8800;
+}
+
+.head {
+  width:225px;
+}
+
+img {
+  max-width: 500px;
+  max-height: 500px;
+}

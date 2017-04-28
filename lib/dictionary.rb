@@ -9,6 +9,7 @@ class Word
     self.string = string
     self.id = UUID.new.generate
     @definitions = []
+    @links = []
     @@words.push(self) unless self.string.empty?
   end
 
@@ -24,8 +25,16 @@ class Word
     @definitions
   end
 
+  def links
+    @links
+  end
+
   def add_definition(definition)
     @definitions.push(definition) unless definition.string.empty?
+  end
+
+  def add_link(link)
+    @links.push(link) unless link == ""
   end
 
   def self.find(input)
