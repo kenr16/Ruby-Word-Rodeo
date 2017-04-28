@@ -6,7 +6,9 @@
 
 ## Overview
 
-This website will allow a user to enter a word into a database.  From there, the user can navigate to a page dedicated specifically to that word and input multiple definitions for that word.  The user can also upload links to images that have to do with that word, by submitting the image link.  From there, the image will be resized and displayed on the page.  The user is also awarded points based on how many words, definitions and images that they have submitted.
+This website will allow a user to enter a word into a database.  From there, the user can navigate to a page dedicated specifically to that word and input multiple definitions for that word.  The user can also upload links to images that have to do with that word, by submitting the image link.  From there, the image will be resized and displayed on the page.  The user is also awarded points based on how many words, definitions and images that they have submitted.  You may visit the project at the following links:
+Heroku: https://pacific-beach-87632.herokuapp.com/
+Github: https://github.com/kenr16/Ruby-Word-Rodeo
 
 ## Objective
 
