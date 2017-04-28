@@ -2,6 +2,7 @@ require('uuid')
 
 class Word
   @@words = []
+  @@score = []
 
   attr_accessor(:string, :id)
 
@@ -11,6 +12,7 @@ class Word
     @definitions = []
     @links = []
     @@words.push(self) unless self.string.empty?
+    @@score.push("X") unless self.string.empty?
   end
 
   def self.clear_words
@@ -19,6 +21,10 @@ class Word
 
   def self.all
     @@words
+  end
+
+  def self.score
+    @@score.length()
   end
 
   def definitions
@@ -31,10 +37,12 @@ class Word
 
   def add_definition(definition)
     @definitions.push(definition) unless definition.string.empty?
+    @@score.push("X") unless definition.string.empty?
   end
 
   def add_link(link)
     @links.push(link) unless link == ""
+    @@score.push("X") unless link == ""
   end
 
   def self.find(input)
