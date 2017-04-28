@@ -19,6 +19,7 @@ This website will allow a user to enter two strings and check to see if those st
 |Input a word and return that word|"test"|"test"|
 |Input pair of words and return all words|"random", "test"|"random", "test"|
 |Create a definition with a string|"A car is a motorized vehicle"|"A car is a motorized vehicle"|
+|Finds a word from a list of words based on its ID|[word ID]|"Mouse"|
 
 ## Installation
 

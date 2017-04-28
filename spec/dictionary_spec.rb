@@ -48,18 +48,22 @@ describe 'Word' do
     end
   end
 
+  describe("#delete") do
+    it "Finds the word from the overall list of words and deletes it" do
+      test_word = Word.new("Hello")
+      id = test_word.id
+      Word.delete(id)
+      expect(Word.all).to eq([])
+    end
+  end
+
 end
 
 describe 'Definition' do
-
   describe("#initialize") do
     it "Adds an initial object with class Definition" do
       test_definition = Definition.new("A small rodent")
       expect(test_definition.string).to eq("A small rodent")
     end
   end
-
-
-
-
 end

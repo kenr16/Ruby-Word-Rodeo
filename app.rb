@@ -18,5 +18,17 @@ end
 
 get("/edit/:id") do
   @word = Word.find(params.fetch('id'))
+  display = @word.string
+  @floating_text = "#{display}"
+  erb(:word)
+end
+
+get("/add-definition/:id") do
+  definition_input = params.fetch('definition_input')
+  new_definition = Definition.new(definition_input)
+  @word = Word.find(params.fetch('id'))
+  @word.add_definition(new_definition)
+  display = @word.string
+  @floating_text = "#{display}"
   erb(:word)
 end

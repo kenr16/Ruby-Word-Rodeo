@@ -1,0 +1,23 @@
+<h1><%= @floating_text %></h1>
+
+
+
+<ul>
+  <hr>
+  <% @word.definitions.each do |definition| %>
+    <%= "<li>#{definition.string}</li><hr>" %>
+  <% end %>
+</ul>
+
+<form action="/add-definition/<%="#{@word.id}"%>">
+  <div class="form-group">
+    <label for="definition_input">Brand this word with a definition:</label>
+    <input name="definition_input" id="definition_input" class="form-control" type="text">
+  </div>
+  <button class="btn btn-primary">Add Definition!</button>
+</form>
+
+<br>
+
+<a href="/delete" class="btn btn-danger">Delete Word</a>
+<a href="/" class="btn btn-info">Back</a>

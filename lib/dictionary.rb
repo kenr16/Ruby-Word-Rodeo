@@ -30,7 +30,10 @@ class Word
 
   def self.find(input)
     @@words.detect {|word| word.id == input}
+  end
 
+  def self.delete(id)
+    @@words.delete(self.find(id))
   end
 
 end
