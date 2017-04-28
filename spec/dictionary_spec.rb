@@ -48,8 +48,8 @@ describe 'Word' do
     end
   end
 
-  describe("#find") do
-    it "Finds and returns a word given the word's ID" do
+  describe("#find_word") do
+    it "Finds and returns a word given the word's string" do
       test_word = Word.new("Hello")
       expect(Word.find_word("Hello")).to eq(test_word)
     end

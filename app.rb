@@ -1,7 +1,8 @@
-require 'sinatra'
-require 'sinatra/reloader'
-require './lib/dictionary'
-require 'pry'
+require('sinatra')
+require('sinatra/reloader')
+require('./lib/dictionary')
+require('pry')
+require('dictionary_lookup')
 
 also_reload('lib/**/*.rb')
 
@@ -10,10 +11,19 @@ get('/') do
   erb(:index)
 end
 
+
+
+
+
 post('/add-word') do
   word_input = params.fetch('word_input')
-  Word.new(word_input)
-  @floating_text = "You've corralled a NEW WORD ranch hand: #{word_input}"
+  results = DictionaryLookup::Base.define(word_input)
+  if results.count >= 1
+    Word.new(word_input)
+    @floating_text = "You've corralled a NEW WORD ranch hand: #{word_input}"
+  else
+    @floating_text = "This word does not appear in English."
+  end
   erb(:index)
 end
 

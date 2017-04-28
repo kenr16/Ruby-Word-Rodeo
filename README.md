@@ -6,11 +6,11 @@
 
 ## Overview
 
-This website will allow a user to enter two strings and check to see if those strings are anagrams of one another.  If the two strings are anagrams, it will check to see if they are palindromes as well.  If the two strings are not anagrams, it will check to see if they are palindromes.  If you are unable to run the ruby app in a localhost, the link to the Heroku page for this project is available at: https://pure-thicket-40941.herokuapp.com/
+This website will allow a user to enter a word into a database.  From there, the user can navigate to a page dedicated specifically to that word and input multiple definitions for that word.  The user can also upload links to images that have to do with that word, by submitting the image link.  From there, the image will be resized and displayed on the page.  The user is also awarded points based on how many words, definitions and images that they have submitted.
 
 ## Objective
 
-
+The objective here was to create a child-friendly website for children to occupy themselves by learning about dictionary definitions by submitting information that will dynamically update the content of the webpage that they are on.
 
 ## Specifications
 
@@ -20,6 +20,8 @@ This website will allow a user to enter two strings and check to see if those st
 |Input pair of words and return all words|"random", "test"|"random", "test"|
 |Create a definition with a string|"A car is a motorized vehicle"|"A car is a motorized vehicle"|
 |Finds a word from a list of words based on its ID|[word ID]|"Mouse"|
+|Create both a word and a definition and add the definition to the word|"Dog" "A 4 legged mammal"|"Dog: A 4 legged mammal"|
+|Allow the user to enter more definitions for a word|"A common canine house pet"|"Dog: A 4 legged mammal, A common canine house pet"|
 
 ## Installation
 
